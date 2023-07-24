@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="mcMain">
+        <div id="score">Score: 0</div>
+        <!-- display of the points -->
+        <div id="correctAttemps">Points:<span id="correctCount">0</span></div>
+        <!-- display of the wrong attemps -->
+        <div id="wrongAttempts">Attempts: <span id="wrongCount">0</span></div>
+        <!-- timer display -->
+        <div id="timer">Timer: 0</div>
+        <!-- multiplication challenge display -->
+        <div id="multiplyChallenge"></div>
+        <!-- display input numbers -->
+        <div class="mcAnswer">
+            <input type="text" id="result" readonly>
+            <p id="prompt"></p>
+        </div>
+    </div>
+    <!-- input button nunbers -->
+    <div class="mcKeyBoard">
+        <div class="mcButton1">
+            <button onclick="appendValue(7)">7</button>
+            <button onclick="appendValue(8)">8</button>
+            <button onclick="appendValue(9)">9</button>
+        </div>
+        <div class="mcButton2">
+            <button onclick="appendValue(4)">4</button>
+            <button onclick="appendValue(5)">5</button>
+            <button onclick="appendValue(6)">6</button>
+        </div>
+        <div class="mcButton3">
+            <button onclick="appendValue(1)">1</button>
+            <button onclick="appendValue(2)">2</button>
+            <button onclick="appendValue(3)">3</button>
+        </div>
+        <div class="mcButton4">
+            <button onclick="clearContent()">Clear</button>
+            <button onclick="appendValue(0)">0</button>
+            <button id="enterButton" onclick="submitAnswer()">Enter</button>
+        </div>
+    </div>
+    <script>
+        //display first multiplication challenge
+        newChallenge();
+    </script>
+</body>
+</html>
