@@ -8,47 +8,82 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="mcMain">
-        <div id="score">Score: 0</div>
-        <!-- display of the points -->
-        <div id="correctAttemps">Points:<span id="correctCount">0</span></div>
-        <!-- display of the wrong attemps -->
-        <div id="wrongAttempts">Attempts: <span id="wrongCount">0</span></div>
-        <!-- timer display -->
-        <div id="timer">Timer: 0</div>
-        <!-- multiplication challenge display -->
-        <div id="multiplyChallenge"></div>
-        <!-- display input numbers -->
-        <div class="mcAnswer">
-            <input type="text" id="result" readonly>
-            <p id="prompt"></p>
+     <!-- Header Section-->
+     <section id="header">
+        <nav>
+            <div class="logo"><img class="nav-icon" src="/Assets/Logo_Black.png" alt=""><h1>Clienth Carlo Hestiada</h1></div>
+        </nav>
+    </section>
+    <!-- End Header Section-->
+    <h1 class="titleGames">Multiplication Challenge</h1>
+    <section id="multiBox">
+        <div class="bgBox">
+            <div class="mcNav">
+                <div id="score">Score: <span id="scoreCount">0</span></div>
+                <!-- display of the points -->
+                <div id="correctAttemps">Points:<span id="correctCount">0</span></div>
+                <!-- display of the wrong attemps -->
+                <div id="wrongAttempts">Attempts: <span id="wrongCount">0</span></div>
+                <!-- timer display -->
+                <div id="timer">Timer: 0</div>
+            </div>
+            <div class="mcMain">
+                <p id="prompt"></p>
+                <!-- multiplication challenge display -->
+                <div id="multiplyChallenge"></div><br>
+                <!-- display input numbers -->
+                <div class="mcAnswer">
+                    <input type="text" id="result">
+                </div>
+                <div class="scoreContainer" style="display: none;">
+                    <div id="scoreText">Your Score is: 0</div>
+                    <button id="restartButton" onclick="restartGame()">Restart</button>
+                </div>
+                <!-- input button nunbers -->
+            </div>
+            <div class="boxMain"> 
+            <!-- button -->
+                <div class="mcKeyBoard">
+                    <div class="mcButton1">
+                        <button onclick="appendValue(7)">7</button>
+                        <button onclick="appendValue(8)">8</button>
+                        <button onclick="appendValue(9)">9</button>
+                    </div>
+                    <div class="mcButton2">
+                        <button onclick="appendValue(4)">4</button>
+                        <button onclick="appendValue(5)">5</button>
+                        <button onclick="appendValue(6)">6</button>
+                    </div>
+                    <div class="mcButton3">
+                        <button onclick="appendValue(1)">1</button>
+                        <button onclick="appendValue(2)">2</button>
+                        <button onclick="appendValue(3)">3</button>
+                    </div>
+                    <div class="mcButton4">
+                        <button onclick="clearContent()">Clear</button>
+                        <button onclick="appendValue(0)">0</button>
+                        <button id="enterButton" onclick="submitAnswer()">Enter</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- input button nunbers -->
-    <div class="mcKeyBoard">
-        <div class="mcButton1">
-            <button onclick="appendValue(7)">7</button>
-            <button onclick="appendValue(8)">8</button>
-            <button onclick="appendValue(9)">9</button>
+    </section>
+
+    <!-- Footer Section-->
+     <footer id="foot">
+        <div class="container">
+            <h1 class="foot-title"> Social Links :</h1>
+            <div class="foot-icon">
+                <a href="https://www.facebook.com/carlo.hestiada" target="_blank"><img src="/Assets/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com/clienthcarlo/" target="_blank"><img src="/Assets/instagram.png" alt=""></a>
+                <a href="https://github.com/carlohestiada" target="_blank"><img src="/Assets/github.png" alt=""></a>
+            </div>
         </div>
-        <div class="mcButton2">
-            <button onclick="appendValue(4)">4</button>
-            <button onclick="appendValue(5)">5</button>
-            <button onclick="appendValue(6)">6</button>
-        </div>
-        <div class="mcButton3">
-            <button onclick="appendValue(1)">1</button>
-            <button onclick="appendValue(2)">2</button>
-            <button onclick="appendValue(3)">3</button>
-        </div>
-        <div class="mcButton4">
-            <button onclick="clearContent()">Clear</button>
-            <button onclick="appendValue(0)">0</button>
-            <button id="enterButton" onclick="submitAnswer()">Enter</button>
-        </div>
-    </div>
+        <div class="foot-logo"><img src="/Assets/Logo-White.png" alt="logo"><h1>Clienth Carlo Hestiada | July 29, 2023 </h1></div>
+     </footer>
+    <!-- End Footer Section-->
     <script>
-        //display first multiplication challenge
+        //display multiplication challenge first
         newChallenge();
     </script>
 </body>
